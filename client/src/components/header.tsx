@@ -22,33 +22,33 @@ export default function Header() {
     <>
       {navigationItems.map((item) => (
         <Link key={item.href} href={item.href}>
-          <a
+          <span
             className={`${
               mobile 
-                ? "block py-2 px-4 text-gray-700 hover:bg-gray-100" 
-                : "text-gray-700 hover:text-primary transition-colors"
+                ? "block py-2 px-4 text-foreground hover:bg-muted cursor-pointer" 
+                : "text-foreground hover:text-primary transition-colors cursor-pointer"
             } ${location === item.href ? "text-primary font-medium" : ""}`}
             onClick={onItemClick}
           >
             {item.label}
-          </a>
+          </span>
         </Link>
       ))}
     </>
   );
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-card shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/">
-            <a className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 cursor-pointer">
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <Leaf className="text-white w-5 h-5" />
+                <Leaf className="text-primary-foreground w-5 h-5" />
               </div>
               <h1 className="font-bold text-2xl text-primary">Mineral Balls</h1>
-            </a>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 
 export default function VideoSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-bold text-3xl md:text-4xl text-gray-800 mb-4">
+          <h2 className="font-bold text-3xl md:text-4xl text-foreground mb-4">
             See How We Make Our Premium Makhana
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             From farm to package, discover our quality process and the story behind Mineral Balls
           </p>
         </div>

@@ -14,15 +14,15 @@ export default function HeroSection() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl text-white">
+            <div className="max-w-2xl text-primary-foreground">
               <h2 className="font-bold text-4xl md:text-6xl mb-4">Premium Mineral Balls</h2>
               <p className="text-lg md:text-xl mb-6 opacity-90">
                 Discover the goodness of premium makhana packed with essential minerals and incredible taste
               </p>
               <Link href="/products">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-white px-8 py-4 text-lg">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg">
                   Shop Now <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
