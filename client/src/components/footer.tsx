@@ -36,22 +36,22 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/">
-                  <a className="text-gray-300 hover:text-primary transition-colors">Home</a>
+                  <span className="text-gray-300 hover:text-primary transition-colors cursor-pointer">Home</span>
                 </Link>
               </li>
               <li>
                 <Link href="/products">
-                  <a className="text-gray-300 hover:text-primary transition-colors">Products</a>
+                  <span className="text-gray-300 hover:text-primary transition-colors cursor-pointer">Products</span>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a className="text-gray-300 hover:text-primary transition-colors">About Us</a>
+                  <span className="text-gray-300 hover:text-primary transition-colors cursor-pointer">About Us</span>
                 </Link>
               </li>
               <li>
                 <Link href="/benefits">
-                  <a className="text-gray-300 hover:text-primary transition-colors">Benefits</a>
+                  <span className="text-gray-300 hover:text-primary transition-colors cursor-pointer">Benefits</span>
                 </Link>
               </li>
             </ul>
@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/contact">
-                  <a className="text-gray-300 hover:text-primary transition-colors">Contact Us</a>
+                  <span className="text-gray-300 hover:text-primary transition-colors cursor-pointer">Contact Us</span>
                 </Link>
               </li>
               <li>
