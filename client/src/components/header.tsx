@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { ShoppingCart, Menu, Leaf } from "lucide-react";
+import { ShoppingCart, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCartStore } from "@/lib/cart";
@@ -43,11 +43,12 @@ export default function Header() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-2 cursor-pointer">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <Leaf className="text-primary-foreground w-5 h-5" />
-              </div>
-              <h1 className="font-bold text-2xl text-primary">Mineral Balls</h1>
+            <div className="flex items-center cursor-pointer">
+              <img 
+                src="/attached_assets/ChatGPT Image Jul 6, 2025, 02_23_06 PM_1752156010011.png" 
+                alt="Mineral Balls - Mithila Makhana" 
+                className="h-12 w-auto"
+              />
             </div>
           </Link>
 

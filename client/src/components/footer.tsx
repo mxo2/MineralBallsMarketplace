@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Leaf, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,11 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <Leaf className="text-white w-4 h-4" />
-              </div>
-              <h3 className="font-bold text-xl">Mineral Balls</h3>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/attached_assets/ChatGPT Image Jul 6, 2025, 02_23_06 PM_1752156010011.png" 
+                alt="Mineral Balls - Mithila Makhana" 
+                className="h-10 w-auto filter brightness-0 invert"
+              />
             </div>
             <p className="text-gray-300 mb-4">
               Premium makhana products packed with essential minerals and incredible taste.
