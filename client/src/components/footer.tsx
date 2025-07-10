@@ -10,9 +10,13 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/attached_assets/ChatGPT Image Jul 6, 2025, 02_23_06 PM_1752156010011.png" 
+                src="/ChatGPT Image Jul 6, 2025, 02_23_06 PM_1752156010011.png" 
                 alt="Mineral Balls - Mithila Makhana" 
                 className="h-10 w-auto filter brightness-0 invert"
+                onError={(e) => {
+                  console.log("Footer logo failed to load");
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
             <p className="text-gray-300 mb-4">

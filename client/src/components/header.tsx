@@ -45,9 +45,13 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center cursor-pointer">
               <img 
-                src="/attached_assets/ChatGPT Image Jul 6, 2025, 02_23_06 PM_1752156010011.png" 
+                src="/ChatGPT Image Jul 6, 2025, 02_23_06 PM_1752156010011.png" 
                 alt="Mineral Balls - Mithila Makhana" 
                 className="h-12 w-auto"
+                onError={(e) => {
+                  console.log("Logo image failed to load");
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
           </Link>
