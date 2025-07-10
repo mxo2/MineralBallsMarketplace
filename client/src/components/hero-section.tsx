@@ -6,32 +6,32 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background">
       {/* Hero Banner */}
-      <div className="relative h-[500px] md:h-[600px]">
+      <div className="relative h-[600px] md:h-[700px]">
         <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
           {/* Left Side - Product Image */}
           <div className="relative overflow-hidden">
             <img 
-              src="/attached_assets/banner_1752156729758.png"
-              alt="Mineral Balls Makhana Products"
-              className="w-full h-full object-cover object-left"
+              src="/attached_assets/banner_1752157100737.png"
+              alt="Mineral Balls Makhana Products - Various Flavored Makhana in Bowls"
+              className="w-full h-full object-cover object-center"
             />
           </div>
           
           {/* Right Side - Dark Background with Text */}
-          <div className="relative bg-gradient-to-br from-amber-900/90 to-amber-800/95 flex items-center justify-center">
-            <div className="text-center px-8 py-12">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          <div className="relative bg-gradient-to-br from-amber-900/85 to-amber-800/90 flex items-center justify-center">
+            <div className="text-center px-8 py-12 max-w-lg">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 Mithila Makhana
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-amber-100 mb-6">
-                Balls of all minerals
+              <h2 className="text-2xl md:text-4xl font-semibold text-amber-100 mb-8 leading-relaxed">
+                Balls of All Minerals
               </h2>
-              <p className="text-lg text-amber-50 mb-8 max-w-md mx-auto">
-                Premium quality makhana packed with essential minerals for your healthy lifestyle
+              <p className="text-lg md:text-xl text-amber-50/90 mb-10 max-w-md mx-auto leading-relaxed">
+                Premium quality makhana naturally packed with essential minerals for your healthy lifestyle
               </p>
               <Link href="/products">
-                <Button size="lg" className="bg-white text-amber-900 hover:bg-amber-50 px-8 py-4 text-lg font-semibold">
-                  Shop Now
+                <Button size="lg" className="bg-white text-amber-900 hover:bg-amber-50 px-10 py-5 text-xl font-bold rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                  Shop Premium Makhana
                 </Button>
               </Link>
             </div>
