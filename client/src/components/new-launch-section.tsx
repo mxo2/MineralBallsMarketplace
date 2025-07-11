@@ -53,11 +53,11 @@ export default function NewLaunchSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newProducts.map((product) => (
             <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="relative bg-gray-50 h-64 flex items-center justify-center p-4">
+              <div className="relative h-64 flex items-center justify-center p-6">
                 <img 
                   src={product.imageUrl}
                   alt={product.name}
-                  className="max-w-full max-h-full object-contain"
+                  className="max-w-full max-h-full object-contain drop-shadow-lg"
                 />
               </div>
               <CardContent className="p-6">
