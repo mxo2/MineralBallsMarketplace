@@ -12,7 +12,7 @@ export default function HeroSection() {
           <img 
             src="/banner_1752157100737.png"
             alt="Mineral Balls Makhana Products - Various Flavored Makhana in Bowls"
-            className="w-full h-full object-contain object-center bg-amber-50/30"
+            className="w-full h-full object-cover object-center"
             onError={(e) => {
               console.log("Banner image failed to load");
               e.currentTarget.style.display = 'none';
