@@ -3,40 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
 import type { Product } from "@shared/schema";
-import { useCartStore } from "@/lib/cart";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 
 export default function NewLaunchSection() {
-  const { incrementCartCount, sessionId } = useCartStore();
-  const { toast } = useToast();
-
   const { data: products = [], isLoading } = useQuery<Product[]>({
     queryKey: ["/api/products"],
   });
 
   const newProducts = products.filter(product => product.isNew).slice(0, 3);
-
-  const addToCart = async (productId: number) => {
-    try {
-      await apiRequest("POST", "/api/cart", {
-        productId,
-        quantity: 1,
-        sessionId,
-      });
-      incrementCartCount();
-      toast({
-        title: "Added to cart",
-        description: "Product has been added to your cart successfully.",
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to add product to cart. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
 
   if (isLoading) {
     return (
@@ -80,25 +53,25 @@ export default function NewLaunchSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newProducts.map((product) => (
             <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="relative">
+              <div className="relative bg-gray-50 h-64 flex items-center justify-center p-4">
                 <img 
                   src={product.imageUrl}
                   alt={product.name}
-                  className="w-full h-48 object-cover"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-gold text-white">NEW</Badge>
-                  <span className="text-accent font-bold">₹{product.price}</span>
+                  <Badge className="bg-amber-600 text-white">NEW</Badge>
+                  <span className="text-amber-600 font-semibold text-sm">{product.weight}</span>
                 </div>
-                <h3 className="font-bold text-xl mb-2">{product.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+                <h3 className="font-bold text-xl mb-2 text-gray-800">{product.name}</h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-white"
-                  onClick={() => addToCart(product.id)}
+                  className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                  onClick={() => window.open('https://wa.me/919829649640?text=Hi%2C%20I%20am%20interested%20in%20' + encodeURIComponent(product.name) + '%20from%20Mineral%20Balls', '_blank')}
                 >
-                  Add to Cart
+                  Order Now
                 </Button>
               </CardContent>
             </Card>
