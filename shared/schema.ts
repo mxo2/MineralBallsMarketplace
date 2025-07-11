@@ -6,8 +6,6 @@ export const products = pgTable("products", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   description: text("description").notNull(),
-  price: decimal("price", { precision: 10, scale: 2 }).notNull(),
-  originalPrice: decimal("original_price", { precision: 10, scale: 2 }),
   category: text("category").notNull(), // roasted, raw, powder, flavored
   flavor: text("flavor"), // chili, pineapple, chocolate, etc.
   weight: text("weight").notNull(), // e.g., "100g", "250g"

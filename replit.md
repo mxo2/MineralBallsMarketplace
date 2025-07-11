@@ -101,6 +101,8 @@ The architecture prioritizes type safety, developer experience, and scalability 
 - July 11, 2025. Added "Get in Touch" contact form with ERPNext CRM integration
 - July 11, 2025. Converted from e-commerce to lead generation platform - removed pricing, changed cart to interests
 - July 11, 2025. Updated Featured Products section with new product images (flavours, powder, raw makhana, roasted makhana)
+- July 11, 2025. Complete pricing removal and WhatsApp integration - All product interactions redirect to WhatsApp chat
+- July 11, 2025. Updated company contact information - Maximum Momentum Inc, Jaipur with mobile +91-9829649640
 
 ## User Preferences
 

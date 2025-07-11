@@ -98,9 +98,9 @@ export default function ProductCard({ product }: ProductCardProps) {
               <Button 
                 size="sm"
                 className="bg-amber-600 hover:bg-amber-700 text-white"
-                onClick={addToInterests}
+                onClick={() => window.open('https://wa.me/919829649640?text=Hi%2C%20I%20am%20interested%20in%20' + encodeURIComponent(product.name) + '%20from%20Mineral%20Balls', '_blank')}
               >
-                Show Interest
+                Order Now
               </Button>
             </div>
           </CardContent>

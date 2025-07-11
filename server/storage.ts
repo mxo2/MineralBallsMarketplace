@@ -124,7 +124,6 @@ export class MemStorage implements IStorage {
       {
         name: "Classic Roasted Makhana",
         description: "Traditional roasted makhana with light seasoning, perfect for snacking",
-        price: "249",
         category: "roasted",
         weight: "100g",
         imageUrl: "/rostedmakhana_new.png",
@@ -149,7 +148,6 @@ export class MemStorage implements IStorage {
       {
         name: "Spicy Chili Makhana",
         description: "Perfectly spiced with natural chili powder for those who love heat",
-        price: "269",
         category: "flavored",
         flavor: "chili",
         weight: "100g",
@@ -168,7 +166,6 @@ export class MemStorage implements IStorage {
       {
         name: "Premium Raw Makhana",
         description: "Unprocessed natural makhana seeds, perfect for home cooking",
-        price: "199",
         category: "raw",
         weight: "250g",
         imageUrl: "/raw_makhana_new.png",
@@ -187,8 +184,6 @@ export class MemStorage implements IStorage {
       {
         name: "Chocolate Makhana",
         description: "Rich chocolate coating with crispy makhana center",
-        price: "299",
-        originalPrice: "329",
         category: "flavored",
         flavor: "chocolate",
         weight: "65g",
@@ -208,7 +203,6 @@ export class MemStorage implements IStorage {
       {
         name: "Pineapple Makhana",
         description: "Tropical pineapple flavor with natural sweetness",
-        price: "279",
         category: "flavored",
         flavor: "pineapple",
         weight: "80g",
@@ -228,7 +222,6 @@ export class MemStorage implements IStorage {
       {
         name: "Makhana Powder",
         description: "Fine powder perfect for smoothies, baking and healthy recipes",
-        price: "349",
         category: "powder",
         weight: "200g",
         imageUrl: "/powder_new.png",
@@ -247,8 +240,6 @@ export class MemStorage implements IStorage {
       {
         name: "Variety Pack",
         description: "Mix of all flavors in one convenient pack",
-        price: "399",
-        originalPrice: "450",
         category: "flavored",
         weight: "300g",
         imageUrl: "/flavours_new.png",
@@ -266,7 +257,6 @@ export class MemStorage implements IStorage {
       {
         name: "Himalayan Salt Roasted",
         description: "Roasted with premium Himalayan pink salt",
-        price: "289",
         category: "roasted",
         weight: "120g",
         imageUrl: "https://pixabay.com/get/g4130ec1b4f32bb753e3e2841c199e8f73e40ae7156b288802db3700e7b6fbe6d4c242fd98ccb3dbf8a84f44655d5f9cd6eaead86be809c88087ea324b9b746c5_1280.jpg",

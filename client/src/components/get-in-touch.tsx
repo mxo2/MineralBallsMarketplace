@@ -66,6 +66,22 @@ export default function GetInTouch() {
           <p className="text-lg text-amber-800/80 max-w-2xl mx-auto">
             Ready to experience premium Mineral Balls makhana? Share your requirements with us and we'll help you find the perfect solution for your needs.
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+            <div className="flex items-center gap-2 text-amber-800">
+              <span className="font-semibold">📞 Call:</span>
+              <a href="tel:+919829649640" className="hover:text-amber-900">+91-9829649640</a>
+            </div>
+            <div className="flex items-center gap-2 text-amber-800">
+              <span className="font-semibold">📧 Email:</span>
+              <a href="mailto:info@mxmomentum.in" className="hover:text-amber-900">info@mxmomentum.in</a>
+            </div>
+            <button 
+              onClick={() => window.open('https://wa.me/919829649640?text=Hi%2C%20I%20am%20interested%20in%20Mineral%20Balls%20makhana%20products', '_blank')}
+              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold transition-colors"
+            >
+              💬 WhatsApp Us
+            </button>
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">

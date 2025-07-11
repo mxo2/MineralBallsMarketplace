@@ -89,23 +89,29 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="text-primary w-4 h-4" />
-                <span className="text-gray-300">+91 9876543210</span>
+                <a href="tel:+919829649640" className="text-gray-300 hover:text-primary transition-colors">+91-9829649640</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="text-primary w-4 h-4" />
-                <span className="text-gray-300">info@mineralballs.com</span>
+                <a href="mailto:info@mxmomentum.in" className="text-gray-300 hover:text-primary transition-colors">info@mxmomentum.in</a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="text-primary w-4 h-4 mt-1" />
-                <span className="text-gray-300">123 Health Street, Wellness City, India</span>
+                <span className="text-gray-300">Maximum Momentum Inc<br />T1 Jagdamba Towere<br />Amarapali Circle, Vaishali Nagar<br />Jaipur 302021</span>
               </div>
+              <button 
+                onClick={() => window.open('https://wa.me/919829649640?text=Hi%2C%20I%20am%20interested%20in%20Mineral%20Balls%20makhana%20products', '_blank')}
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold transition-colors flex items-center gap-2 mt-3"
+              >
+                💬 WhatsApp Us
+              </button>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            &copy; 2024 Mineral Balls. All rights reserved. |{" "}
+            &copy; 2025 Mineral Balls by Maximum Momentum Inc. All rights reserved. |{" "}
             <a href="#" className="text-primary hover:underline">Privacy Policy</a> |{" "}
             <a href="#" className="text-primary hover:underline">Terms of Service</a>
           </p>
