@@ -18,8 +18,10 @@ export default function VideoGrid() {
               Discover the story behind our premium makhana through our video gallery
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        </div>
+        
+        <div className="w-full px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((item) => (
               <div key={item} className="aspect-[9/16] bg-amber-100 rounded-lg animate-pulse" />
             ))}
@@ -40,8 +42,10 @@ export default function VideoGrid() {
             Discover the story behind our premium makhana through our video gallery
           </p>
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+      </div>
+      
+      <div className="w-full px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {videos.slice(0, 4).map((video) => (
             <div 
               key={video.id} 
