@@ -42,8 +42,13 @@ export default function AdminVideoPanel() {
       form.reset();
       toast({ title: "Video added successfully!" });
     },
-    onError: () => {
-      toast({ title: "Failed to add video", variant: "destructive" });
+    onError: (error: any) => {
+      console.error("Create video error:", error);
+      toast({ 
+        title: "Failed to add video", 
+        description: error?.message || "Unknown error occurred",
+        variant: "destructive" 
+      });
     },
   });
 
@@ -57,8 +62,13 @@ export default function AdminVideoPanel() {
       form.reset();
       toast({ title: "Video updated successfully!" });
     },
-    onError: () => {
-      toast({ title: "Failed to update video", variant: "destructive" });
+    onError: (error: any) => {
+      console.error("Update video error:", error);
+      toast({ 
+        title: "Failed to update video", 
+        description: error?.message || "Unknown error occurred",
+        variant: "destructive" 
+      });
     },
   });
 
