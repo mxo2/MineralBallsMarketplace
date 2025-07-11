@@ -6,13 +6,13 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background">
       {/* Hero Banner */}
-      <div className="relative h-[600px] md:h-[700px] overflow-hidden">
+      <div className="relative h-[400px] md:h-[500px] overflow-hidden">
         {/* Background Image - Full Width */}
         <div className="absolute inset-0">
           <img 
             src="/banner_1752157100737.png"
             alt="Mineral Balls Makhana Products - Various Flavored Makhana in Bowls"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain object-center bg-amber-50/30"
             onError={(e) => {
               console.log("Banner image failed to load");
               e.currentTarget.style.display = 'none';
