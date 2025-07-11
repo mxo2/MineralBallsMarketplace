@@ -1,4 +1,4 @@
-import { products, categories, cartItems, type Product, type InsertProduct, type Category, type InsertCategory, type CartItem, type InsertCartItem } from "@shared/schema";
+import { products, categories, cartItems, videos, type Product, type InsertProduct, type Category, type InsertCategory, type CartItem, type InsertCartItem, type Video, type InsertVideo } from "@shared/schema";
 
 export interface IStorage {
   // Products
@@ -18,23 +18,34 @@ export interface IStorage {
   updateCartItemQuantity(id: number, quantity: number): Promise<CartItem | undefined>;
   removeFromCart(id: number): Promise<boolean>;
   clearCart(sessionId: string): Promise<boolean>;
+  
+  // Videos
+  getVideos(): Promise<Video[]>;
+  getVideo(id: number): Promise<Video | undefined>;
+  createVideo(video: InsertVideo): Promise<Video>;
+  updateVideo(id: number, video: Partial<InsertVideo>): Promise<Video | undefined>;
+  deleteVideo(id: number): Promise<boolean>;
 }
 
 export class MemStorage implements IStorage {
   private products: Map<number, Product>;
   private categories: Map<number, Category>;
   private cartItems: Map<number, CartItem>;
+  private videos: Map<number, Video>;
   private currentProductId: number;
   private currentCategoryId: number;
   private currentCartItemId: number;
+  private currentVideoId: number;
 
   constructor() {
     this.products = new Map();
     this.categories = new Map();
     this.cartItems = new Map();
+    this.videos = new Map();
     this.currentProductId = 1;
     this.currentCategoryId = 1;
     this.currentCartItemId = 1;
+    this.currentVideoId = 1;
     
     this.seedData();
   }
@@ -69,6 +80,44 @@ export class MemStorage implements IStorage {
     ];
 
     categoryData.forEach(cat => this.createCategory(cat));
+
+    // Seed sample videos
+    const videoData: InsertVideo[] = [
+      {
+        title: "Farm to Table: Our Makhana Journey",
+        description: "See how we source premium makhana directly from farmers",
+        videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        isActive: true,
+        displayOrder: 1
+      },
+      {
+        title: "Traditional Roasting Process",
+        description: "Discover our authentic roasting techniques passed down through generations",
+        videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+        thumbnailUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        isActive: true,
+        displayOrder: 2
+      },
+      {
+        title: "Health Benefits Explained",
+        description: "Learn about the incredible nutritional value of makhana",
+        videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
+        thumbnailUrl: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        isActive: true,
+        displayOrder: 3
+      },
+      {
+        title: "Customer Stories",
+        description: "Hear from our satisfied customers about their makhana experience",
+        videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+        thumbnailUrl: "https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        isActive: true,
+        displayOrder: 4
+      }
+    ];
+
+    videoData.forEach(vid => this.createVideo(vid));
 
     // Seed products
     const productData: InsertProduct[] = [
@@ -324,6 +373,45 @@ export class MemStorage implements IStorage {
     
     itemsToDelete.forEach(id => this.cartItems.delete(id));
     return true;
+  }
+
+  async getVideos(): Promise<Video[]> {
+    return Array.from(this.videos.values())
+      .filter(video => video.isActive)
+      .sort((a, b) => a.displayOrder - b.displayOrder);
+  }
+
+  async getVideo(id: number): Promise<Video | undefined> {
+    return this.videos.get(id);
+  }
+
+  async createVideo(insertVideo: InsertVideo): Promise<Video> {
+    const id = this.currentVideoId++;
+    const video: Video = { 
+      ...insertVideo, 
+      id,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
+    this.videos.set(id, video);
+    return video;
+  }
+
+  async updateVideo(id: number, updateVideo: Partial<InsertVideo>): Promise<Video | undefined> {
+    const video = this.videos.get(id);
+    if (!video) return undefined;
+    
+    const updatedVideo: Video = { 
+      ...video, 
+      ...updateVideo,
+      updatedAt: new Date()
+    };
+    this.videos.set(id, updatedVideo);
+    return updatedVideo;
+  }
+
+  async deleteVideo(id: number): Promise<boolean> {
+    return this.videos.delete(id);
   }
 }
 

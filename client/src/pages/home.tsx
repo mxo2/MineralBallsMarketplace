@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
+import VideoGrid from "@/components/video-grid";
 import SuperfoodBanner from "@/components/superfood-banner";
 import VideoSection from "@/components/video-section";
 import NewLaunchSection from "@/components/new-launch-section";
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <VideoGrid />
         <SuperfoodBanner />
         <VideoSection />
         <NewLaunchSection />
