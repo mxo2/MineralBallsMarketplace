@@ -112,8 +112,15 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
             &copy; 2025 Mineral Balls by Maximum Momentum Inc. All rights reserved. |{" "}
-            <a href="#" className="text-primary hover:underline">Privacy Policy</a> |{" "}
-            <a href="#" className="text-primary hover:underline">Terms of Service</a>
+            <Link href="/privacy-policy">
+              <span className="text-primary hover:underline cursor-pointer">Privacy Policy</span>
+            </Link> |{" "}
+            <Link href="/cookies-policy">
+              <span className="text-primary hover:underline cursor-pointer">Cookies Policy</span>
+            </Link> |{" "}
+            <Link href="/terms-conditions">
+              <span className="text-primary hover:underline cursor-pointer">Terms & Conditions</span>
+            </Link>
           </p>
         </div>
       </div>

@@ -10,6 +10,9 @@ import ProductDetail from "@/pages/product-detail";
 import About from "@/pages/about";
 import Benefits from "@/pages/benefits";
 import Contact from "@/pages/contact";
+import PrivacyPolicy from "@/pages/privacy-policy";
+import CookiesPolicy from "@/pages/cookies-policy";
+import TermsConditions from "@/pages/terms-conditions";
 import AdminVideoPanel from "@/components/admin-video-panel";
 
 function Router() {
@@ -22,6 +25,9 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/benefits" component={Benefits} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/cookies-policy" component={CookiesPolicy} />
+      <Route path="/terms-conditions" component={TermsConditions} />
       <Route path="/admin/videos" component={AdminVideoPanel} />
       <Route component={NotFound} />
     </Switch>
