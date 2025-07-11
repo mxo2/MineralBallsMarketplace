@@ -201,6 +201,59 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Contact form route
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { firstName, lastName, email, phone, company, requirements } = req.body;
+      
+      // Validate required fields
+      if (!firstName || !lastName || !email || !phone || !requirements) {
+        return res.status(400).json({ error: "Missing required fields" });
+      }
+
+      // Prepare data for ERPNext CRM
+      const leadData = {
+        lead_name: `${firstName} ${lastName}`,
+        first_name: firstName,
+        last_name: lastName,
+        email_id: email,
+        mobile_no: phone,
+        company_name: company || "",
+        notes: requirements,
+        source: "Website - Mineral Balls",
+        status: "Open",
+        lead_owner: "Administrator"
+      };
+
+      // Submit to ERPNext CRM
+      const response = await fetch("https://erpnext.crm.mxo2.com/api/resource/Lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `token ${process.env.ERPNEXT_API_KEY}:${process.env.ERPNEXT_API_SECRET}`
+        },
+        body: JSON.stringify(leadData)
+      });
+
+      if (!response.ok) {
+        throw new Error(`ERPNext API error: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      console.log(`Lead created successfully: ${result.data.name}`);
+      
+      res.json({ 
+        success: true, 
+        message: "Thank you for contacting us! We'll get back to you soon.",
+        leadId: result.data.name 
+      });
+
+    } catch (error) {
+      console.log(`Error submitting contact form: ${error}`);
+      res.status(500).json({ error: "Failed to submit contact form. Please try again." });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

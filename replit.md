@@ -95,7 +95,32 @@ The architecture prioritizes type safety, developer experience, and scalability 
 
 ## Changelog
 - July 06, 2025. Initial setup
+- July 11, 2025. Added video management system with external URL support
+- July 11, 2025. Added "Pick Your Choice" product showcase section
+- July 11, 2025. Added "Find Us On Online Platforms" section
+- July 11, 2025. Added "Get in Touch" contact form with ERPNext CRM integration
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Recent Features Added
+
+### Contact Form & CRM Integration
+- Complete contact form with validation (firstName, lastName, email, phone, company, requirements)
+- Direct integration with ERPNext CRM at erpnext.crm.mxo2.com
+- Lead creation with proper data mapping
+- Form validation and error handling
+- Success/error toast notifications
+- Requires ERPNEXT_API_KEY and ERPNEXT_API_SECRET environment variables
+
+### Video Management System
+- Admin panel for video management at /admin/videos
+- Support for external video URLs (unlimited length)
+- Video grid with autoplay and loop functionality
+- Generational targeting messaging for different age groups
+
+### Product Showcase Sections
+- "Pick Your Choice" section with colorful product display
+- "Find Us On Online Platforms" section with e-commerce platform logos
+- Full-width responsive designs with hover effects

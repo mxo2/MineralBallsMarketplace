@@ -11,6 +11,7 @@ import AboutMakhana from "@/components/about-makhana";
 import BenefitsSection from "@/components/benefits-section";
 import FeaturedProducts from "@/components/featured-products";
 import OnlinePlatforms from "@/components/online-platforms";
+import GetInTouch from "@/components/get-in-touch";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <BenefitsSection />
         <FeaturedProducts />
         <OnlinePlatforms />
+        <GetInTouch />
       </main>
       <Footer />
     </div>
