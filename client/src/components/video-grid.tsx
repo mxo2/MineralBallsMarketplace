@@ -12,10 +12,10 @@ export default function VideoGrid() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
-              Watch Our Journey
+              Discover Mineral Balls: Real Makhana for Every Generation
             </h2>
             <p className="text-lg text-amber-800/80 max-w-2xl mx-auto">
-              Discover the story behind our premium makhana through our video gallery
+              From post-workout snacks to kids' healthy drinks and elder-friendly treats
             </p>
           </div>
         </div>
@@ -36,10 +36,10 @@ export default function VideoGrid() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
-            Watch Our Journey
+            Discover Mineral Balls: Real Makhana for Every Generation
           </h2>
           <p className="text-lg text-amber-800/80 max-w-2xl mx-auto">
-            Discover the story behind our premium makhana through our video gallery
+            From post-workout snacks to kids' healthy drinks and elder-friendly treats
           </p>
         </div>
       </div>

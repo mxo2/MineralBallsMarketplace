@@ -84,32 +84,32 @@ export class MemStorage implements IStorage {
     // Seed sample videos
     const videoData: InsertVideo[] = [
       {
-        title: "Premium Makhana Experience",
-        description: "Discover the premium quality of Mineral Balls makhana",
+        title: "Post-Workout Power Snack",
+        description: "Refuel with Mineral Balls: The Perfect Post-Workout Makhana Snack",
         videoUrl: "https://raahuketu.com/public/video/video1.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
         displayOrder: 1
       },
       {
-        title: "Farm to Table Journey",
-        description: "See how we source premium makhana directly from farmers",
+        title: "Healthy Makhana Milk for Kids",
+        description: "Smart Sips: Kids' Juice with Mineral Balls Makhana Powder",
         videoUrl: "https://raahuketu.com/public/video/video2.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
         displayOrder: 2
       },
       {
-        title: "Traditional Roasting Process",
-        description: "Discover our authentic roasting techniques passed down through generations",
+        title: "Premium Makhana Quality",
+        description: "Experience the superior quality of Mineral Balls makhana products",
         videoUrl: "https://raahuketu.com/public/video/video3.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
         displayOrder: 3
       },
       {
-        title: "Health Benefits Explained",
-        description: "Learn about the incredible nutritional value of makhana",
+        title: "Tea-Time Cold Drink & Roasted Makhana for Elders",
+        description: "Golden Moments: Mineral Balls Roasted Makhana with Cold Drinks",
         videoUrl: "https://raahuketu.com/public/video/video4.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
