@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import AboutMakhana from "@/components/about-makhana";
 
 export default function About() {
   return (
@@ -8,16 +7,14 @@ export default function About() {
       <Header />
       <main>
         {/* Page Header */}
-        <section className="py-16 bg-primary text-white">
+        <section className="py-16 bg-amber-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="font-bold text-4xl md:text-5xl mb-4">About Makhana</h1>
+            <h1 className="font-bold text-4xl md:text-5xl mb-4">About Mineral Balls</h1>
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-              Learn about the amazing superfood that has been treasured for centuries
+              Premium makhana products for every generation
             </p>
           </div>
         </section>
-
-        <AboutMakhana />
 
         {/* Additional Content */}
         <section className="py-16 bg-white">
