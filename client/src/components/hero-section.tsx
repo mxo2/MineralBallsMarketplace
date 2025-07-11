@@ -6,35 +6,42 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background">
       {/* Hero Banner */}
-      <div className="relative h-[600px] md:h-[700px]">
+      <div className="relative h-[600px] md:h-[700px] overflow-hidden">
+        {/* Background Image - Full Width */}
+        <div className="absolute inset-0">
+          <img 
+            src="/banner_1752157100737.png"
+            alt="Mineral Balls Makhana Products - Various Flavored Makhana in Bowls"
+            className="w-full h-full object-cover object-center"
+            onError={(e) => {
+              console.log("Banner image failed to load");
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        </div>
+        
+        {/* Gradient Overlay for Seamless Blend */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-900/20 to-amber-900/95"></div>
+        
+        {/* Content Container */}
         <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
-          {/* Left Side - Product Image */}
-          <div className="relative overflow-hidden">
-            <img 
-              src="/banner_1752157100737.png"
-              alt="Mineral Balls Makhana Products - Various Flavored Makhana in Bowls"
-              className="w-full h-full object-cover object-center"
-              onError={(e) => {
-                console.log("Banner image failed to load");
-                e.currentTarget.style.display = 'none';
-              }}
-            />
-          </div>
+          {/* Left Side - Transparent to show image */}
+          <div className="relative"></div>
           
-          {/* Right Side - Dark Background with Text */}
-          <div className="relative bg-gradient-to-br from-amber-900/85 to-amber-800/90 flex items-center justify-center">
-            <div className="text-center px-8 py-12 max-w-lg">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          {/* Right Side - Text Content with Backdrop Blur */}
+          <div className="relative flex items-center justify-center">
+            <div className="backdrop-blur-sm bg-amber-900/40 rounded-2xl p-8 md:p-12 text-center max-w-lg mx-4">
+              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                 Mithila Makhana
               </h1>
-              <h2 className="text-2xl md:text-4xl font-semibold text-amber-100 mb-8 leading-relaxed">
+              <h2 className="text-xl md:text-4xl font-semibold text-amber-100 mb-8 leading-relaxed drop-shadow-md">
                 Balls of All Minerals
               </h2>
-              <p className="text-lg md:text-xl text-amber-50/90 mb-10 max-w-md mx-auto leading-relaxed">
+              <p className="text-base md:text-xl text-amber-50/95 mb-10 max-w-md mx-auto leading-relaxed drop-shadow-sm">
                 Premium quality makhana naturally packed with essential minerals for your healthy lifestyle
               </p>
               <Link href="/products">
-                <Button size="lg" className="bg-white text-amber-900 hover:bg-amber-50 px-10 py-5 text-xl font-bold rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <Button size="lg" className="bg-white text-amber-900 hover:bg-amber-50 px-8 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
                   Shop Premium Makhana
                 </Button>
               </Link>
