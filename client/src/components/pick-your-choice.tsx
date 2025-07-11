@@ -1,39 +1,39 @@
-import image1 from "@assets/image1_1752224930466.png";
-import image2 from "@assets/image2_1752224930469.png";
-import image3 from "@assets/image3_1752224930470.png";
-import image4 from "@assets/image4_1752224930470.png";
+import flavoursImage from "@assets/flavours_1752240578145.png";
+import roastedImage from "@assets/rostedmakhana_1752240578155.png";
+import powderImage from "@assets/powder_1752240578156.png";
+import rawImage from "@assets/raw_makhana_1752240578156.png";
 import image5 from "@assets/image5_1752224930471.png";
 
 const products = [
   {
     id: 1,
-    name: "CLASSIC CRUNTED",
-    image: image1,
-    bgColor: "bg-cyan-300"
+    name: "ROASTED MAKHANA",
+    image: roastedImage,
+    bgColor: "bg-amber-300"
   },
   {
     id: 2,
-    name: "JAR",
-    image: image2,
+    name: "FLAVOURED VARIETIES",
+    image: flavoursImage,
     bgColor: "bg-red-400"
   },
   {
     id: 3,
     name: "MAKHANA POWDER",
-    image: image3,
+    image: powderImage,
     bgColor: "bg-lime-300"
   },
   {
     id: 4,
-    name: "TRAIL MIX",
-    image: image4,
-    bgColor: "bg-blue-500"
+    name: "RAW MAKHANA",
+    image: rawImage,
+    bgColor: "bg-blue-400"
   },
   {
     id: 5,
-    name: "CHOCOLATE",
+    name: "PREMIUM SELECTION",
     image: image5,
-    bgColor: "bg-amber-600"
+    bgColor: "bg-green-500"
   }
 ];
 
