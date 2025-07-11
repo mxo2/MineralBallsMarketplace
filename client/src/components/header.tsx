@@ -47,7 +47,7 @@ export default function Header() {
               <img 
                 src="/logo_bg_1752204377370.png" 
                 alt="Mineral Balls - Mithila Makhana" 
-                className="h-16 w-auto"
+                className="h-20 w-auto"
                 onError={(e) => {
                   console.log("Logo image failed to load");
                   e.currentTarget.style.display = 'none';

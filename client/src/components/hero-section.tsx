@@ -31,13 +31,18 @@ export default function HeroSection() {
           {/* Right Side - Text Content with Backdrop Blur */}
           <div className="relative flex items-center justify-center">
             <div className="backdrop-blur-sm bg-amber-900/40 rounded-2xl p-8 md:p-12 text-center max-w-lg mx-4">
-              <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                Mithila Makhana
-              </h1>
-              <h2 className="text-xl md:text-4xl font-semibold text-amber-100 mb-8 leading-relaxed drop-shadow-md">
-                Balls of All Minerals
-              </h2>
-              <p className="text-base md:text-xl text-amber-50/95 mb-10 max-w-md mx-auto leading-relaxed drop-shadow-sm">
+              <div className="mb-8">
+                <img 
+                  src="/logo_bg_1752204377370.png" 
+                  alt="Mineral Balls - Mithila Makhana" 
+                  className="h-24 md:h-32 w-auto mx-auto drop-shadow-lg"
+                  onError={(e) => {
+                    console.log("Banner logo failed to load");
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+              <p className="text-lg md:text-2xl text-amber-50/95 mb-10 max-w-md mx-auto leading-relaxed drop-shadow-sm font-medium">
                 Premium quality makhana naturally packed with essential minerals for your healthy lifestyle
               </p>
               <Link href="/products">
