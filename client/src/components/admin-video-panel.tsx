@@ -158,8 +158,12 @@ export default function AdminVideoPanel() {
                     <FormItem>
                       <FormLabel>Video URL</FormLabel>
                       <FormControl>
-                        <Input placeholder="https://example.com/video.mp4" {...field} />
+                        <Input placeholder="/attached_assets/your-video.mp4" {...field} />
                       </FormControl>
+                      <div className="text-xs text-gray-500 mt-1">
+                        • For local files: /attached_assets/filename.mp4<br/>
+                        • For external: https://example.com/video.mp4
+                      </div>
                       <FormMessage />
                     </FormItem>
                   )}
