@@ -39,43 +39,41 @@ const products = [
 
 export default function PickYourChoice() {
   return (
-    <section className="py-8 bg-amber-50/30">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-yellow-400 to-amber-400 py-3 mb-0 rounded-t-lg">
-          <h2 className="text-center text-xl md:text-2xl font-bold text-amber-900">
-            Pick Your Choice
-          </h2>
-        </div>
-        
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-0 bg-white rounded-b-lg overflow-hidden shadow-lg">
-          {products.map((product, index) => (
-            <div 
-              key={product.id}
-              className={`${product.bgColor} p-6 flex flex-col items-center justify-center min-h-[200px] relative group cursor-pointer hover:scale-105 transition-transform duration-300`}
-            >
-              {/* Product Image */}
-              <div className="flex-1 flex items-center justify-center mb-4">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="max-w-full max-h-32 object-contain drop-shadow-lg"
-                />
-              </div>
-              
-              {/* Product Name */}
-              <div className="bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-md">
-                <h3 className="text-xs md:text-sm font-bold text-amber-900 text-center whitespace-nowrap">
-                  {product.name}
-                </h3>
-              </div>
-              
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+    <section className="w-full bg-amber-50/30">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-yellow-400 to-amber-400 py-4 w-full">
+        <h2 className="text-center text-2xl md:text-3xl font-bold text-amber-900">
+          Pick Your Choice
+        </h2>
+      </div>
+      
+      {/* Product Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-0 w-full">
+        {products.map((product, index) => (
+          <div 
+            key={product.id}
+            className={`${product.bgColor} p-8 flex flex-col items-center justify-center min-h-[300px] relative group cursor-pointer hover:scale-105 transition-transform duration-300`}
+          >
+            {/* Product Image */}
+            <div className="flex-1 flex items-center justify-center mb-6">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-48 h-48 object-contain drop-shadow-lg"
+              />
             </div>
-          ))}
-        </div>
+            
+            {/* Product Name */}
+            <div className="bg-white/90 backdrop-blur-sm px-4 py-3 rounded-lg shadow-md">
+              <h3 className="text-sm md:text-base font-bold text-amber-900 text-center whitespace-nowrap">
+                {product.name}
+              </h3>
+            </div>
+            
+            {/* Hover Effect */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+          </div>
+        ))}
       </div>
     </section>
   );
