@@ -16,23 +16,23 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { incrementCartCount, sessionId } = useCartStore();
   const { toast } = useToast();
 
-  const addToCart = async (e: React.MouseEvent) => {
+  const addToInterests = async (e: React.MouseEvent) => {
     e.preventDefault();
     try {
-      await apiRequest("POST", "/api/cart", {
+      await apiRequest("/api/cart", "POST", {
         productId: product.id,
         quantity: 1,
         sessionId,
       });
       incrementCartCount();
       toast({
-        title: "Added to cart",
-        description: "Product has been added to your cart successfully.",
+        title: "Added to interests",
+        description: "Product has been added to your interest list. We'll contact you soon!",
       });
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to add product to cart. Please try again.",
+        description: "Failed to add product to interests. Please try again.",
         variant: "destructive",
       });
     }
@@ -57,11 +57,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   const getBadgeInfo = () => {
-    if (product.isBestseller) return { text: "BESTSELLER", className: "bg-secondary" };
-    if (product.isNew) return { text: "NEW", className: "bg-gold" };
-    if (product.isOrganic) return { text: "ORGANIC", className: "bg-secondary" };
+    if (product.isBestseller) return { text: "BESTSELLER", className: "bg-amber-600" };
+    if (product.isNew) return { text: "NEW", className: "bg-green-600" };
+    if (product.isOrganic) return { text: "ORGANIC", className: "bg-green-700" };
     if (product.flavor === "chili") return { text: "HOT", className: "bg-red-500" };
-    if (product.originalPrice) return { text: "SALE", className: "bg-accent" };
     return null;
   };
 
@@ -91,17 +90,17 @@ export default function ProductCard({ product }: ProductCardProps) {
             <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <span className="text-accent font-bold text-lg">₹{product.price}</span>
-                {product.originalPrice && (
-                  <span className="text-gray-400 line-through text-sm">₹{product.originalPrice}</span>
+                <span className="text-amber-600 font-semibold text-sm">{product.weight}</span>
+                {product.isOrganic && (
+                  <span className="text-green-600 text-xs font-medium">Organic</span>
                 )}
               </div>
               <Button 
                 size="sm"
-                className="bg-primary hover:bg-primary/90 text-white"
-                onClick={addToCart}
+                className="bg-amber-600 hover:bg-amber-700 text-white"
+                onClick={addToInterests}
               >
-                Add to Cart
+                Show Interest
               </Button>
             </div>
           </CardContent>

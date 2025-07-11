@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-interface CartStore {
+interface InterestStore {
   sessionId: string;
   cartCount: number;
   setCartCount: (count: number) => void;
@@ -9,7 +9,7 @@ interface CartStore {
   decrementCartCount: () => void;
 }
 
-export const useCartStore = create<CartStore>()(
+export const useCartStore = create<InterestStore>()(
   persist(
     (set) => ({
       sessionId: crypto.randomUUID(),
