@@ -41,8 +41,8 @@ export const videos = pgTable("videos", {
   id: serial("id").primaryKey(),
   title: varchar("title", { length: 255 }).notNull(),
   description: text("description"),
-  videoUrl: varchar("video_url", { length: 500 }).notNull(),
-  thumbnailUrl: varchar("thumbnail_url", { length: 500 }),
+  videoUrl: text("video_url").notNull(),
+  thumbnailUrl: text("thumbnail_url"),
   isActive: boolean("is_active").default(true).notNull(),
   displayOrder: integer("display_order").default(0).notNull(),
   createdAt: timestamp("created_at").defaultNow(),
@@ -65,6 +65,9 @@ export const insertVideoSchema = createInsertSchema(videos).omit({
   id: true,
   createdAt: true,
   updatedAt: true,
+}).extend({
+  videoUrl: z.string().url("Please enter a valid URL").or(z.string().startsWith("/", "Local files must start with /")),
+  thumbnailUrl: z.string().url("Please enter a valid URL").optional().or(z.literal("")),
 });
 
 export type Product = typeof products.$inferSelect;

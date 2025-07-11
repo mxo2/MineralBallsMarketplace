@@ -86,7 +86,7 @@ export class MemStorage implements IStorage {
       {
         title: "Premium Makhana Experience",
         description: "Your uploaded video showcasing the premium quality of Mineral Balls makhana",
-        videoUrl: "/attached_assets/video1_1752220611235.mp4",
+        videoUrl: "https://raahuketu.com/public/video/video1.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
         displayOrder: 1
