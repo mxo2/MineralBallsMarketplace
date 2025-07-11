@@ -99,6 +99,8 @@ The architecture prioritizes type safety, developer experience, and scalability 
 - July 11, 2025. Added "Pick Your Choice" product showcase section
 - July 11, 2025. Added "Find Us On Online Platforms" section
 - July 11, 2025. Added "Get in Touch" contact form with ERPNext CRM integration
+- July 11, 2025. Converted from e-commerce to lead generation platform - removed pricing, changed cart to interests
+- July 11, 2025. Updated Featured Products section with new product images (flavours, powder, raw makhana, roasted makhana)
 
 ## User Preferences
 
