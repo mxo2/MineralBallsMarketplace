@@ -1,48 +1,4 @@
 export default function SuperfoodBanner() {
-  const productImages = [
-    {
-      url: "/rostedmakhana_1752240935835.png",
-      name: "Roasted",
-      position: "top-4 left-8",
-      size: "w-20 h-20",
-      rotation: "rotate-12"
-    },
-    {
-      url: "/raw_makhana_1752240935834.png", 
-      name: "Raw",
-      position: "top-16 right-12",
-      size: "w-16 h-16",
-      rotation: "-rotate-6"
-    },
-    {
-      url: "/chocalate_1752242243647.png",
-      name: "Chocolate",
-      position: "bottom-20 left-4",
-      size: "w-18 h-18",
-      rotation: "rotate-6"
-    },
-    {
-      url: "/pianpple_1752242265988.png",
-      name: "Pineapple", 
-      position: "bottom-8 right-8",
-      size: "w-20 h-20",
-      rotation: "-rotate-12"
-    },
-    {
-      url: "/spicychilly_1752242265988.png",
-      name: "Spicy",
-      position: "top-32 left-24",
-      size: "w-16 h-16", 
-      rotation: "rotate-3"
-    },
-    {
-      url: "/powder_1752240935834.png",
-      name: "Powder",
-      position: "bottom-32 right-20",
-      size: "w-22 h-22",
-      rotation: "-rotate-8"
-    }
-  ];
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 py-16 md:py-20">
@@ -92,40 +48,18 @@ export default function SuperfoodBanner() {
             </button>
           </div>
           
-          {/* Right Side - Floating Product Images */}
-          <div className="relative h-[500px] lg:h-[600px]">
-            {/* Background decorative circles */}
-            <div className="absolute inset-0">
-              <div className="absolute top-12 left-12 w-32 h-32 bg-gradient-to-br from-yellow-300 to-orange-300 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute bottom-12 right-12 w-40 h-40 bg-gradient-to-br from-red-300 to-pink-300 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-amber-300 to-yellow-300 rounded-full opacity-10"></div>
-            </div>
-            
-            {/* Floating Product Images */}
-            {productImages.map((product, index) => (
-              <div
-                key={index}
-                className={`absolute ${product.position} ${product.size} ${product.rotation} transform transition-all duration-500 hover:scale-110 hover:z-20 animate-bounce`}
-                style={{ 
-                  animationDelay: `${index * 0.3}s`,
-                  animationDuration: `${2 + index * 0.2}s`
-                }}
-              >
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-white rounded-full shadow-lg opacity-80 group-hover:opacity-100 transition-opacity"></div>
-                  <img
-                    src={product.url}
-                    alt={product.name}
-                    className="relative z-10 w-full h-full object-contain p-2 drop-shadow-lg"
-                  />
-                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
-                      {product.name}
-                    </span>
-                  </div>
-                </div>
+          {/* Right Side - All Products Image */}
+          <div className="relative">
+            <div className="relative transform hover:scale-105 transition-transform duration-500">
+              <img
+                src="/allproduct_1752243115959.png"
+                alt="Mineral Balls Complete Product Range - Classic Crunch, Choco Bliss, Trail Treat, Pineapple Makhana, Chocolate Coated Makhana, Spicy Chili"
+                className="w-full h-auto object-contain drop-shadow-2xl"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-3 rounded-lg shadow-lg transform rotate-3">
+                <span className="font-bold text-sm">6 Amazing Flavors</span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
