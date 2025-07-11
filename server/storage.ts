@@ -84,12 +84,20 @@ export class MemStorage implements IStorage {
     // Seed sample videos
     const videoData: InsertVideo[] = [
       {
+        title: "Premium Makhana Experience",
+        description: "Your uploaded video showcasing the premium quality of Mineral Balls makhana",
+        videoUrl: "/attached_assets/video1_1752220611235.mp4",
+        thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        isActive: true,
+        displayOrder: 1
+      },
+      {
         title: "Farm to Table: Our Makhana Journey",
         description: "See how we source premium makhana directly from farmers",
         videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
-        displayOrder: 1
+        displayOrder: 2
       },
       {
         title: "Traditional Roasting Process",
@@ -97,21 +105,13 @@ export class MemStorage implements IStorage {
         videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
-        displayOrder: 2
+        displayOrder: 3
       },
       {
         title: "Health Benefits Explained",
         description: "Learn about the incredible nutritional value of makhana",
         videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        isActive: true,
-        displayOrder: 3
-      },
-      {
-        title: "Customer Stories",
-        description: "Hear from our satisfied customers about their makhana experience",
-        videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-        thumbnailUrl: "https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
         displayOrder: 4
       }

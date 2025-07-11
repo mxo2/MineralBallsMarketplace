@@ -23,7 +23,7 @@ export default function VideoGrid() {
         <div className="w-full px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="aspect-[9/16] bg-amber-100 rounded-lg animate-pulse" />
+              <div key={item} className="aspect-[9/16] bg-amber-100 rounded-lg animate-pulse shadow-lg" />
             ))}
           </div>
         </div>
@@ -55,6 +55,10 @@ export default function VideoGrid() {
                 <video 
                   className="w-full h-full object-cover"
                   controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   poster={video.thumbnailUrl || undefined}
                   preload="metadata"
                 >
