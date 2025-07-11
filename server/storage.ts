@@ -57,7 +57,7 @@ export class MemStorage implements IStorage {
         name: "Roasted Makhana",
         slug: "roasted",
         description: "Perfectly roasted and seasoned makhana",
-        imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        imageUrl: ""
       },
       {
         name: "Raw Makhana",
