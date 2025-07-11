@@ -70,11 +70,11 @@ export default function ProductCard({ product }: ProductCardProps) {
     <Link href={`/product/${product.id}`}>
       <a>
         <Card className="overflow-hidden hover:shadow-xl transition-all transform hover:scale-105">
-          <div className="relative">
+          <div className="relative bg-gray-50 h-48 flex items-center justify-center p-4">
             <img 
               src={product.imageUrl}
               alt={product.name}
-              className="w-full h-48 object-contain bg-gray-50"
+              className="max-w-full max-h-full object-contain"
             />
           </div>
           <CardContent className="p-4">
