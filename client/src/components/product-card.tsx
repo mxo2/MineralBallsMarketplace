@@ -74,7 +74,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             <img 
               src={product.imageUrl}
               alt={product.name}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-contain bg-gray-50"
             />
           </div>
           <CardContent className="p-4">

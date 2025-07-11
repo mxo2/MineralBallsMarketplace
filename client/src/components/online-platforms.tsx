@@ -2,32 +2,38 @@ export default function OnlinePlatforms() {
   const platforms = [
     {
       name: "Amazon",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      text: "Amazon",
+      color: "bg-orange-500",
       url: "#"
     },
     {
       name: "Wellness Forever",
-      logo: "https://via.placeholder.com/120x60/4CAF50/white?text=Wellness+Forever",
+      text: "Wellness Forever",
+      color: "bg-green-600",
       url: "#"
     },
     {
       name: "LBB",
-      logo: "https://via.placeholder.com/80x60/00BCD4/white?text=LBB",
+      text: "LBB",
+      color: "bg-cyan-500",
       url: "#"
     },
     {
       name: "Milk Basket",
-      logo: "https://via.placeholder.com/120x60/2196F3/white?text=Milk+Basket",
+      text: "Milk Basket",
+      color: "bg-blue-600",
       url: "#"
     },
     {
       name: "Big Basket",
-      logo: "https://via.placeholder.com/120x60/FF9800/white?text=Big+Basket",
+      text: "Big Basket",
+      color: "bg-orange-600",
       url: "#"
     },
     {
       name: "Flipkart",
-      logo: "https://via.placeholder.com/120x60/2196F3/white?text=Flipkart",
+      text: "Flipkart",
+      color: "bg-blue-500",
       url: "#"
     }
   ];
@@ -43,7 +49,7 @@ export default function OnlinePlatforms() {
       
       {/* Platforms Grid */}
       <div className="bg-gray-100 py-6 px-4">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 max-w-6xl mx-auto">
           {platforms.map((platform, index) => (
             <a
               key={index}
@@ -52,12 +58,8 @@ export default function OnlinePlatforms() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="bg-white rounded-lg shadow-md hover:shadow-lg p-4 flex items-center justify-center min-w-[100px] min-h-[60px]">
-                <img
-                  src={platform.logo}
-                  alt={platform.name}
-                  className="max-w-full max-h-12 object-contain filter group-hover:brightness-110 transition-all duration-300"
-                />
+              <div className={`${platform.color} rounded-lg shadow-md hover:shadow-lg p-4 flex items-center justify-center min-w-[120px] min-h-[60px] text-white font-semibold text-sm md:text-base`}>
+                {platform.text}
               </div>
             </a>
           ))}
