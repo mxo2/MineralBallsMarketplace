@@ -35,7 +35,7 @@ export default function HeroSection() {
                 <img 
                   src="/logo_bg_1752204377370.png" 
                   alt="Mineral Balls - Mithila Makhana" 
-                  className="h-24 md:h-32 w-auto mx-auto drop-shadow-lg"
+                  className="h-32 md:h-40 w-auto mx-auto drop-shadow-lg"
                   onError={(e) => {
                     console.log("Banner logo failed to load");
                     e.currentTarget.style.display = 'none';
