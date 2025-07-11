@@ -10,6 +10,7 @@ import ProductCategories from "@/components/product-categories";
 import AboutMakhana from "@/components/about-makhana";
 import BenefitsSection from "@/components/benefits-section";
 import FeaturedProducts from "@/components/featured-products";
+import OnlinePlatforms from "@/components/online-platforms";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <AboutMakhana />
         <BenefitsSection />
         <FeaturedProducts />
+        <OnlinePlatforms />
       </main>
       <Footer />
     </div>
