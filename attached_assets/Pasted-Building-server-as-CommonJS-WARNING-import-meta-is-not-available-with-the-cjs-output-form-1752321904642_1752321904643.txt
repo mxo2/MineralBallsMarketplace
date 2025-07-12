@@ -1,0 +1,59 @@
+Building server as CommonJS...
+▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+
+    server/vite.ts:71:32:
+      71 │   const distPath = path.resolve(import.meta.dirname, "public");
+         ╵                                 ~~~~~~~~~~~
+
+  You need to set the output format to "esm" for "import.meta" to work correctly.
+
+✘ [ERROR] Top-level await is currently not supported with the "cjs" output format
+
+    vite.config.ts:13:10:
+      13 │           await import("@replit/vite-plugin-cartographer").then((m) =>
+         ╵           ~~~~~
+
+▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+
+    vite.config.ts:21:24:
+      21 │       "@": path.resolve(import.meta.dirname, "client", "src"),
+         ╵                         ~~~~~~~~~~~
+
+  You need to set the output format to "esm" for "import.meta" to work correctly.
+
+▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+
+    vite.config.ts:22:30:
+      22 │       "@shared": path.resolve(import.meta.dirname, "shared"),
+         ╵                               ~~~~~~~~~~~
+
+  You need to set the output format to "esm" for "import.meta" to work correctly.
+
+▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+
+    vite.config.ts:23:30:
+      23 │       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+         ╵                               ~~~~~~~~~~~
+
+  You need to set the output format to "esm" for "import.meta" to work correctly.
+
+▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+
+    vite.config.ts:26:21:
+      26 │   root: path.resolve(import.meta.dirname, "client"),
+         ╵                      ~~~~~~~~~~~
+
+  You need to set the output format to "esm" for "import.meta" to work correctly.
+
+5 of 6 warnings and 1 error shown (disable the message limit with --log-limit=0)
+Starting fresh application...
+[PM2][ERROR] Script not found: /home/frappe/mineralballs.com/dist/server.js
+┌────┬───────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name          │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼───────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 13 │ gtpcglobal    │ default     │ 1.0.0   │ fork    │ 183799   │ 2D     │ 207  │ online    │ 0%       │ 70.6mb   │ frappe   │ disabled │
+│ 7  │ mxo2          │ default     │ 1.0.0   │ fork    │ 48425    │ 3D     │ 2    │ online    │ 0%       │ 78.8mb   │ frappe   │ disabled │
+│ 3  │ n8n           │ default     │ N/A     │ fork    │ 1629933  │ 6s     │ 554… │ online    │ 0%       │ 135.0mb  │ frappe   │ disabled │
+└────┴───────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+[TAILING] Tailing last 5 lines for [mineralballs-new] process (change the value with --lines option)
+
