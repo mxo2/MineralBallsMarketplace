@@ -108,6 +108,8 @@ The architecture prioritizes type safety, developer experience, and scalability 
 - July 12, 2025. Added production database setup with DatabaseStorage implementation and seeding
 - July 12, 2025. Fixed image and video loading issues - updated all product images to use attached assets, configured static file serving
 - July 12, 2025. Updated video URLs to use different videos (video1.mp4, video2.mp4, video3.mp4, video4.mp4) from raahuketu.com
+- July 12, 2025. Fixed "Our Product Range" section category images - updated all category image URLs to use attached assets
+- July 12, 2025. Added favicon and page title "India's Premium Makhana - Mineral Balls" with SEO meta description
 
 ## User Preferences
 

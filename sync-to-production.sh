@@ -22,6 +22,9 @@ cp simple-server.js dist/server.js
 echo "📁 Copying assets..."
 cp -r attached_assets dist/
 
+# Copy logo as favicon
+cp attached_assets/logo_bg_1752204377370.png dist/public/favicon.png
+
 # Create package.json for CommonJS
 echo '{"type": "commonjs", "main": "server.js"}' > dist/package.json
 

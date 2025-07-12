@@ -203,6 +203,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Serve attached assets
 app.use('/assets', express.static(path.join(__dirname, '..', 'attached_assets')));
 
+// Custom favicon route
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, 'assets/logo_bg_1752204377370.png'));
+});
+
 // Catch all handler for React Router
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
