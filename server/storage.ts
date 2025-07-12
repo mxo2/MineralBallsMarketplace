@@ -94,7 +94,7 @@ export class MemStorage implements IStorage {
       {
         title: "Healthy Makhana Milk for Kids",
         description: "Smart Sips: Kids' Juice with Mineral Balls Makhana Powder",
-        videoUrl: "/attached_assets/video1_1752220611235.mp4",
+        videoUrl: "https://raahuketu.com/public/video/video2.mp4",
         thumbnailUrl: "/attached_assets/flavours_1752243675544.png",
         isActive: true,
         displayOrder: 2
@@ -102,8 +102,8 @@ export class MemStorage implements IStorage {
       {
         title: "Premium Makhana Quality",
         description: "Experience the superior quality of Mineral Balls makhana products",
-        videoUrl: "/attached_assets/video1_1752220611235.mp4",
-        thumbnailUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        videoUrl: "https://raahuketu.com/public/video/video3.mp4",
+        thumbnailUrl: "/attached_assets/powder_1752243668411.png",
         isActive: true,
         displayOrder: 3
       },
@@ -111,7 +111,7 @@ export class MemStorage implements IStorage {
         title: "Tea-Time Cold Drink & Roasted Makhana for Elders",
         description: "Golden Moments: Mineral Balls Roasted Makhana with Cold Drinks",
         videoUrl: "https://raahuketu.com/public/video/video4.mp4",
-        thumbnailUrl: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        thumbnailUrl: "/attached_assets/raw_makhana_1752243663105.png",
         isActive: true,
         displayOrder: 4
       }

@@ -154,7 +154,7 @@ const videos = [
     id: 2,
     title: "Healthy Kids Snack",
     description: "Nutritious and delicious snack for growing children",
-    videoUrl: "/assets/video1_1752220611235.mp4",
+    videoUrl: "https://raahuketu.com/public/video/video2.mp4",
     thumbnailUrl: "/assets/flavours_1752243675544.png", 
     category: "kids"
   },
@@ -162,7 +162,7 @@ const videos = [
     id: 3,
     title: "Elder-Friendly Nutrition",
     description: "Easy-to-digest superfood for senior citizens",
-    videoUrl: "/assets/video1_1752220611235.mp4",
+    videoUrl: "https://raahuketu.com/public/video/video3.mp4",
     thumbnailUrl: "/assets/powder_1752243668411.png",
     category: "seniors"
   },
@@ -170,7 +170,7 @@ const videos = [
     id: 4,
     title: "Natural Energy Booster",
     description: "Raw makhana for natural energy throughout the day",
-    videoUrl: "/assets/video1_1752220611235.mp4", 
+    videoUrl: "https://raahuketu.com/public/video/video4.mp4", 
     thumbnailUrl: "/assets/raw_makhana_1752243663105.png",
     category: "energy"
   }
