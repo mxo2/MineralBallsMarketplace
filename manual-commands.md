@@ -1,9 +1,9 @@
 # Production Deployment Commands
 
-## RECOMMENDED: Use the automated script
+## RECOMMENDED: Use the simple deployment script
 ```bash
 cd /home/frappe/mineralballs.com
-./production-build.sh
+./deploy-simple.sh
 ```
 
 ## MANUAL: Step-by-step commands

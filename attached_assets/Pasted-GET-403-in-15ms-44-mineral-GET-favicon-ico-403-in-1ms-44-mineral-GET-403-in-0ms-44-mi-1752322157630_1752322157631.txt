@@ -1,0 +1,51 @@
+GET / → 403 in 15ms
+44|mineral | GET /favicon.ico → 403 in 1ms
+44|mineral | GET / → 403 in 0ms
+44|mineral | GET /favicon.ico → 403 in 4ms
+44|mineral | HEAD / → 500 in 28ms
+
+/home/frappe/.pm2/logs/mineralballs-error.log last 5 lines:
+44|mineral |     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+44|mineral |     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+44|mineral |     at Module.load (node:internal/modules/cjs/loader:1275:32) {
+44|mineral |   code: 'ERR_INVALID_ARG_TYPE'
+44|mineral | }
+
+44|mineralballs  | TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of URL. Received undefined
+44|mineralballs  |     at fileURLToPath (node:internal/url:1487:11)
+44|mineralballs  |     at Object.<anonymous> (/home/frappe/mineralballs.com/dist/server.js:37:47)
+44|mineralballs  |     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+44|mineralballs  |     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+44|mineralballs  |     at Module.load (node:internal/modules/cjs/loader:1275:32)
+44|mineralballs  |     at Module._load (node:internal/modules/cjs/loader:1096:12)
+44|mineralballs  |     at Object.<anonymous> (/usr/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+44|mineralballs  |     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+44|mineralballs  |     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+44|mineralballs  |     at Module.load (node:internal/modules/cjs/loader:1275:32) {
+44|mineralballs  |   code: 'ERR_INVALID_ARG_TYPE'
+44|mineralballs  | }
+44|mineralballs  | TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of URL. Received undefined
+44|mineralballs  |     at fileURLToPath (node:internal/url:1487:11)
+44|mineralballs  |     at Object.<anonymous> (/home/frappe/mineralballs.com/dist/server.js:37:47)
+44|mineralballs  |     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+44|mineralballs  |     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+44|mineralballs  |     at Module.load (node:internal/modules/cjs/loader:1275:32)
+44|mineralballs  |     at Module._load (node:internal/modules/cjs/loader:1096:12)
+44|mineralballs  |     at Object.<anonymous> (/usr/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+44|mineralballs  |     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+44|mineralballs  |     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+44|mineralballs  |     at Module.load (node:internal/modules/cjs/loader:1275:32) {
+44|mineralballs  |   code: 'ERR_INVALID_ARG_TYPE'
+44|mineralballs  | }
+44|mineralballs  | TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of URL. Received undefined
+44|mineralballs  |     at fileURLToPath (node:internal/url:1487:11)
+44|mineralballs  |     at Object.<anonymous> (/home/frappe/mineralballs.com/dist/server.js:37:47)
+44|mineralballs  |     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+44|mineralballs  |     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+44|mineralballs  |     at Module.load (node:internal/modules/cjs/loader:1275:32)
+44|mineralballs  |     at Module._load (node:internal/modules/cjs/loader:1096:12)
+44|mineralballs  |     at Object.<anonymous> (/usr/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+44|mineralballs  |     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+44|mineralballs  |     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+44|mineralballs  |     at Module.load (node:internal/modules/cjs/loader:1275:32) {
+44|mineralballs  |   code: 'ERR_INVALID_ARG_TYPE'
