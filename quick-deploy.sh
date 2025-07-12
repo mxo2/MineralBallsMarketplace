@@ -160,7 +160,7 @@ module.exports = {
     exec_mode: 'fork',
     env: {
       NODE_ENV: 'production',
-      PORT: 5000
+      PORT: 7000
     },
     error_file: '$HOME/.pm2/logs/$APP_NAME-error.log',
     out_file: '$HOME/.pm2/logs/$APP_NAME-out.log',
@@ -195,10 +195,10 @@ if pm2 list | grep -q "$APP_NAME.*online"; then
     print_status "✅ Application is running successfully!"
     
     # Test local connection
-    if curl -s http://localhost:5000 > /dev/null; then
+    if curl -s http://localhost:7000 > /dev/null; then
         print_status "✅ Application responds to HTTP requests"
     else
-        print_warning "⚠️  Application not responding on port 5000"
+        print_warning "⚠️  Application not responding on port 7000"
     fi
     
     # Show PM2 status
@@ -227,5 +227,5 @@ echo "  pm2 restart $APP_NAME      - Restart application"
 echo "  pm2 monit                  - Real-time monitoring"
 echo ""
 print_status "Your application should be available at:"
-echo "  http://localhost:5000"
+echo "  http://localhost:7000"
 echo "  http://your-domain.com (if Nginx is configured)"

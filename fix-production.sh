@@ -24,9 +24,9 @@ npx esbuild server/index.ts \
 
 echo "✅ Build complete with ES module fix"
 
-# Start the application
-echo "🚀 Starting application..."
-NODE_ENV=production pm2 start dist/index.js --name mineralballs
+# Start the application on port 7000
+echo "🚀 Starting application on port 7000..."
+NODE_ENV=production PORT=7000 pm2 start dist/index.js --name mineralballs
 
 echo "✅ Application restarted"
 echo "📊 Checking status..."

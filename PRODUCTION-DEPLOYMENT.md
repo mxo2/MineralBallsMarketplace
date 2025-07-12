@@ -82,7 +82,7 @@ nano .env
 # Add these variables:
 NODE_ENV=production
 DATABASE_URL=postgresql://mineralballs_user:your_secure_password@localhost:5432/mineralballs
-PORT=5000
+PORT=7000
 ```
 
 ### 3.4 Database Schema Setup
@@ -128,7 +128,7 @@ module.exports = {
     exec_mode: 'fork',
     env: {
       NODE_ENV: 'production',
-      PORT: 5000
+      PORT: 7000
     },
     error_file: '/home/frappe/.pm2/logs/mineralballs-error.log',
     out_file: '/home/frappe/.pm2/logs/mineralballs-out.log',
@@ -170,7 +170,7 @@ server {
     server_name mineralballs.com www.mineralballs.com;
 
     location / {
-        proxy_pass http://localhost:5000;
+        proxy_pass http://localhost:7000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -244,7 +244,7 @@ pm2 restart mineralballs
 ### 10.1 Test Application
 ```bash
 # Check if application is running
-curl http://localhost:5000
+curl http://localhost:7000
 
 # Test database connection
 NODE_ENV=production tsx -e "import('./server/storage.js').then(m => console.log('Storage type:', m.storage.constructor.name))"
@@ -264,9 +264,9 @@ sudo tail -f /var/log/nginx/error.log
 
 ### Common Issues:
 
-1. **Port 5000 already in use:**
+1. **Port 7000 already in use:**
    ```bash
-   sudo lsof -i :5000
+   sudo lsof -i :7000
    sudo kill -9 PID_NUMBER
    ```
 
@@ -288,7 +288,7 @@ sudo tail -f /var/log/nginx/error.log
 After successful deployment:
 - **HTTP**: http://your-domain.com
 - **HTTPS**: https://your-domain.com (if SSL configured)
-- **Direct IP**: http://your-server-ip:5000
+- **Direct IP**: http://your-server-ip:7000
 
 ## Security Checklist
 
