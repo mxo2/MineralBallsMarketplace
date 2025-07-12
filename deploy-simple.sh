@@ -19,6 +19,10 @@ npx vite build
 echo "📋 Copying simple server..."
 cp simple-server.js dist/server.js
 
+# Copy attached assets to dist for serving
+echo "📁 Copying assets..."
+cp -r attached_assets dist/
+
 # Create CommonJS package.json
 echo '{"type": "commonjs", "main": "server.js"}' > dist/package.json
 

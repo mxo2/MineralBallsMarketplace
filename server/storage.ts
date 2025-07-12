@@ -81,28 +81,28 @@ export class MemStorage implements IStorage {
 
     categoryData.forEach(cat => this.createCategory(cat));
 
-    // Seed sample videos
+    // Seed sample videos with attached assets
     const videoData: InsertVideo[] = [
       {
         title: "Post-Workout Power Snack",
         description: "Refuel with Mineral Balls: The Perfect Post-Workout Makhana Snack",
-        videoUrl: "https://raahuketu.com/public/video/video1.mp4",
-        thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        videoUrl: "/attached_assets/video1_1752220611235.mp4",
+        thumbnailUrl: "/attached_assets/rostedmakhana_1752243656549.png",
         isActive: true,
         displayOrder: 1
       },
       {
         title: "Healthy Makhana Milk for Kids",
         description: "Smart Sips: Kids' Juice with Mineral Balls Makhana Powder",
-        videoUrl: "https://raahuketu.com/public/video/video2.mp4",
-        thumbnailUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        videoUrl: "/attached_assets/video1_1752220611235.mp4",
+        thumbnailUrl: "/attached_assets/flavours_1752243675544.png",
         isActive: true,
         displayOrder: 2
       },
       {
         title: "Premium Makhana Quality",
         description: "Experience the superior quality of Mineral Balls makhana products",
-        videoUrl: "https://raahuketu.com/public/video/video3.mp4",
+        videoUrl: "/attached_assets/video1_1752220611235.mp4",
         thumbnailUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         isActive: true,
         displayOrder: 3
@@ -126,7 +126,7 @@ export class MemStorage implements IStorage {
         description: "Traditional roasted makhana with light seasoning, perfect for snacking",
         category: "roasted",
         weight: "100g",
-        imageUrl: "/rostedmakhana_new.png",
+        imageUrl: "/attached_assets/rostedmakhana_1752243656549.png",
         isBestseller: true,
         rating: "4.8",
         reviewCount: 156,
@@ -151,7 +151,7 @@ export class MemStorage implements IStorage {
         category: "flavored",
         flavor: "chili",
         weight: "100g",
-        imageUrl: "/spicychilly_1752242265988.png",
+        imageUrl: "/attached_assets/spicychilly_1752242265988.png",
         rating: "4.6",
         reviewCount: 89,
         nutritionalInfo: JSON.stringify({
@@ -168,7 +168,7 @@ export class MemStorage implements IStorage {
         description: "Unprocessed natural makhana seeds, perfect for home cooking",
         category: "raw",
         weight: "250g",
-        imageUrl: "/raw_makhana_new.png",
+        imageUrl: "/attached_assets/raw_makhana_1752243663105.png",
         isOrganic: true,
         rating: "4.9",
         reviewCount: 234,
@@ -187,7 +187,7 @@ export class MemStorage implements IStorage {
         category: "flavored",
         flavor: "chocolate",
         weight: "65g",
-        imageUrl: "/chocalate_1752242243647.png",
+        imageUrl: "/attached_assets/chocalate_1752242243647.png",
         isNew: true,
         rating: "4.7",
         reviewCount: 45,
@@ -206,7 +206,7 @@ export class MemStorage implements IStorage {
         category: "flavored",
         flavor: "pineapple",
         weight: "80g",
-        imageUrl: "/pianpple_1752242265988.png",
+        imageUrl: "/attached_assets/pianpple_1752242265988.png",
         isNew: true,
         rating: "4.5",
         reviewCount: 67,
@@ -224,7 +224,7 @@ export class MemStorage implements IStorage {
         description: "Fine powder perfect for smoothies, baking and healthy recipes",
         category: "powder",
         weight: "200g",
-        imageUrl: "/powder_new.png",
+        imageUrl: "/attached_assets/powder_1752243668411.png",
         isNew: true,
         rating: "4.8",
         reviewCount: 123,
@@ -242,7 +242,7 @@ export class MemStorage implements IStorage {
         description: "Mix of all flavors in one convenient pack",
         category: "flavored",
         weight: "300g",
-        imageUrl: "/flavours_new.png",
+        imageUrl: "/attached_assets/flavours_1752243675544.png",
         rating: "4.6",
         reviewCount: 178,
         nutritionalInfo: JSON.stringify({
