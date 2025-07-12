@@ -135,10 +135,10 @@ const products = [
 ];
 
 const categories = [
-  { id: 1, name: "Roasted Makhana", slug: "roasted", description: "Traditional roasted fox nuts with perfect crunch" },
-  { id: 2, name: "Flavored Varieties", slug: "flavored", description: "Exciting flavored options for every taste" },
-  { id: 3, name: "Raw Makhana", slug: "raw", description: "Natural unprocessed fox nuts" },
-  { id: 4, name: "Makhana Powder", slug: "powder", description: "Ground makhana for beverages and recipes" }
+  { id: 1, name: "Roasted Makhana", slug: "roasted", description: "Perfectly roasted and seasoned makhana", imageUrl: "/assets/rostedmakhana_1752243656549.png" },
+  { id: 2, name: "Flavored Varieties", slug: "flavored", description: "Delicious flavored makhana varieties", imageUrl: "/assets/flavours_1752243675544.png" },
+  { id: 3, name: "Raw Makhana", slug: "raw", description: "Natural and unprocessed makhana seeds", imageUrl: "/assets/raw_makhana_1752243663105.png" },
+  { id: 4, name: "Makhana Powder", slug: "powder", description: "Fine ground makhana for versatile use", imageUrl: "/assets/powder_1752243668411.png" }
 ];
 
 const videos = [

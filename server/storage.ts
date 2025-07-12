@@ -57,25 +57,25 @@ export class MemStorage implements IStorage {
         name: "Roasted Makhana",
         slug: "roasted",
         description: "Perfectly roasted and seasoned makhana",
-        imageUrl: "/roasted_category.png"
+        imageUrl: "/attached_assets/rostedmakhana_1752243656549.png"
       },
       {
         name: "Raw Makhana",
         slug: "raw",
         description: "Natural and unprocessed makhana seeds",
-        imageUrl: "/raw_category.png"
+        imageUrl: "/attached_assets/raw_makhana_1752243663105.png"
       },
       {
         name: "Makhana Powder",
         slug: "powder",
         description: "Fine ground makhana for versatile use",
-        imageUrl: "/powder_category.png"
+        imageUrl: "/attached_assets/powder_1752243668411.png"
       },
       {
         name: "Flavored Varieties",
         slug: "flavored",
         description: "Delicious flavored makhana varieties",
-        imageUrl: "/flavours_category.png"
+        imageUrl: "/attached_assets/flavours_1752243675544.png"
       }
     ];
 
