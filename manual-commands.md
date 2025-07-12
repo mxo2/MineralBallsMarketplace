@@ -1,6 +1,12 @@
 # Production Deployment Commands
 
-## RECOMMENDED: Use the simple deployment script
+## RECOMMENDED: Sync latest changes to production
+```bash
+cd /home/frappe/mineralballs.com
+./sync-to-production.sh
+```
+
+## Alternative: Use the simple deployment script
 ```bash
 cd /home/frappe/mineralballs.com
 ./deploy-simple.sh
